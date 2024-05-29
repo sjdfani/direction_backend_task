@@ -26,7 +26,7 @@ services:
 
   celery:
     build: .
-    command: celery -A medical_toxicology_backend worker -l info
+    command: celery -A direction_backend worker -l info
     volumes:
       - .:/code
     depends_on:
@@ -36,7 +36,7 @@ services:
 
   celery-beat:
     build: .
-    command: celery -A medical_toxicology_backend beat -l info
+    command: celery -A direction_backend beat -l info
     volumes:
       - .:/code
     depends_on:
